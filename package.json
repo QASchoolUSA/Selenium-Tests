@@ -1,0 +1,16 @@
+{
+  "name": "selenium-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^90.0.0",
+    "faker": "^5.5.3",
+    "selenium-webdriver": "^4.0.0-beta.3"
+  }
+}
