@@ -1,6 +1,7 @@
 const {Builder, By, Key, until} = require('selenium-webdriver');
 let faker = require('faker');
 
+let URL = 'http://automationpractice.com/index.php';
 let firstName = faker.name.firstName();
 let lastName = faker.name.lastName();
 let password = faker.internet.password();
@@ -29,7 +30,7 @@ console.log("%cPASSWORD: " + password, "color:green");
   let driver = await new Builder().forBrowser('chrome').build();
   try {
 
-    await driver.get('http://automationpractice.com/index.php');
+    await driver.get(URL);
     await driver.findElement(By.xpath('//a[@class="login"]')).click();
     await driver.manage().setTimeouts( { implicit: 10000 } );
     await driver.findElement(By.id('email_create')).sendKeys(email, Key.RETURN);
